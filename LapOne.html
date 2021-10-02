@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>CV FORM</title>
+<meta charset="utf-8">
+</head>
+
+<body>
+<h1> CV FORM </h1>
+<form action="index.html" method="Get">
+<fieldset>
+<legend>Personal Information </legend>
+
+<!-- Name field -->
+<label for="fname">Name:</label><br>
+<input type="text" id="fname" name="fn"> 
+
+<!-- Radio-->
+<label for="male">Gender:</label>
+<input type="radio" id="male" name="gender" value='male'> <label for="male">Male</label>
+<input type="radio" id="female" name="gender" value='female'> <label for='female'>Female </label>
+<br><br>
+
+ <!--tel type-->
+<label for="t">Enter a phone number:</label><br><br>
+<input type="tel" id="t" name="phone" pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}' placeholder="555-55-555"> format 555-55-555
+<br><br>
+
+<!-- URL type -->
+<lable for=""> Your linkedin page: </lable>
+<input type="url" id="linkedin" name="wpage" > 
+<br><br>
+<!-- Email -->
+<lable for="email"> Email </lable>
+<input type="email" id="email" name="email" > 
+<br>
+</fieldset>
+<br><br>
+
+<lable for="ex"> Years of experience (3 to 10): </lable>
+<input type="number" id="ex" name="numofe" min="3" max="10" > 
+
+<!-- range -->
+<lable for="ra"> exepted salary: </lable>
+4000 <input type="range" id="ra" name="es" min="4000" max="1000" > 10000
+<input type="submit" value="send">
+
+<!-- checkbox-->
+<label >language:</label><br>
+<input type='checkbox' id='c1' name='lang' value ='Arabic'>
+<label for='c1'> Arabic</label><br>
+<input type='checkbox' id='c2' name='lang' value='English'>
+<label for='c1'>English</label><br> <br>
+
+<!-- file -->
+<label for="f">Uplaod your CV :</label> <input type='file' id='f' name='cvfile' > <br><br>
+
+<!-- search -->
+<input type="search" id="se" name="se" > 
+<br><br>
+
+<!-- week -->
+<lable for="w"> the marset week .. </lable>
+<input type="week " id="w" name="w" >
+<input type="search" id="se" name="se" > 
+
+
+<!-- MONTH-->
+<label for="m">The nearest month you can start wrok </label> <input type="month" id='m' name='nm'>
+<br><br>
+
+<!-- Time-->
+<label for="t1">the best time to work </label>
+<input type="time" id='t1' name='bt'> <br><br>
+
+<!-- list-->
+<label for='major'>Majors</label> <input list="major" name="ms"> <datalist id="majors">
+<option value="cs"> <option value="IT"> <option value="Da">
+</datalist><br><br>
+
+
+<!-- texterea-->
+<label for='cp'>why you want to work with us </label><br>
+<textarea id='cp' name='comment' rows='5' cols='100'></textarea><br>
+
+
+<input type="submit" value="send"> 
+<input type="reset" value="reset"> 
+
+</form>
+</body>
+</html>
