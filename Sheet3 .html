@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Sheet 3</title>
+<meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Coronavirus Intake Form for attend class</h1>
+    <p>For all our safety, please file this out 24 hours prior to each class (until further notice).
+     Be sure that the information you'll give is accurate and complete. Please get immediate medical attention if you have any of the severe COVID-19 signs</p> 
+    
+     <!-- ues form -->
+      <form >
+      
+ <fieldset>
+   <legend>Personal information</legend>
+   <!-- first a first name -->
+      <label for="Fname">First Name:</label>
+      <br>
+     <input type="text" id="Fname" name="Fname" required>
+          <br>
+   <!-- Not allowed to enter more than 6 characters in last name -->
+          <label for="Lname">last Name:</label>
+          <br>
+          <input type="text" id="Lname" name="Lname" maxlength="6">
+           <br>
+            <label for="">Date of Birth:</label>
+            <br>
+            <!-- Restrict the age: allowed only how born before 1-1-2003 -->
+            <input type="date" name="born" min="1900-00-00" max="2003-01-01">
+            <br>
+             <label for="">Phone:</label>
+             <br>
+            <input type="Number" autocomplete="off">
+            <br>
+            <label for="">Email:</label>
+            <br>
+            <input type="email" required autocomplete="off">
+            <br>
+             <label for="">Do you have "تطمئن-تباعد-توكلنا":</label>
+             
+            <input type="radio" name="ra" value="" required> <label for="">yes</label>
+            <input type="radio" name="ra" value="" required> <label for="">No</label>
+            
+             </fieldset>
+             
+               <fieldset>
+               
+                 <legend>Class information</legend>
+            <label for="">Choose class:</label>
+            <br>
+             <input list="Classe" name="Classe">
+            <datalist id="Classe">
+            <!-- classes -->
+             <option value="204 IT: Wep Programming"></option>
+             <option value="201 CS: Programming 1"></option>
+             <option value="202 CS: Programming 2"></option>
+             <option value="412 CS: Computer ethic"></option>
+             
+             
+            </datalist>
+            <br>
+        
+         <p> Please explain why you need to attend lab </p>
+         <textarea name="msg" id="" cols="55" rows="10">
+         </textarea>
+        </fieldset>
+        
+         <fieldset>
+         
+        <legend> Health Information </legend>
+        <label for=""> How healthy do you feel in general? </label>
+        <br>
+        
+        <!-- max and min -->
+          <span>0</span> <input type="range" max="10" min="0" step="1"><span>10</span> 
+          
+           <p> Check the symptoms that you have experienced in the PAST Week: </p>
+           
+        <input type="checkbox" ><label for=""> Fever/Chills </label>
+        <br>
+        <input type="checkbox" ><label for=""> Headaches </label>
+        <br>
+        <input type="checkbox" ><label for=""> Coughing </label>
+        <br>
+        <input type="checkbox" ><label for=""> Shortnessof breath </label>
+        <br>
+        <input type="checkbox" ><label for=""> Recent loss of sense of smell or taste </label>
+   </fieldset>
+   
+    <button type="submit"> send</button>
+    
+    </body>
+   </form>
+ </html>
