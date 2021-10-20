@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>BMI Calculator Create Using Javascript</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="weight">Your Weight(Kg): </label>
+                </td>
+                <td>
+                    <input type="number" id="weight">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="weight">Your Height(Kg): </label>
+                </td>
+                <td>
+                    <input type="number" id="height">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" id="calcul">Calculate BMI</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>Your BMI: <span id="bmi"></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>This Means: Your BMI: <span id="remark"></span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('calcul').addEventListener('click', function () {
+            let weight = parseInt(document.getElementById('weight').value)
+            let height = parseInt(document.getElementById('height').value)
+            let bmi = (weight / (height * height)) * 10000
+            let remark = document.getElementById('remark')
+            document.getElementById('bmi').innerText = bmi
+            if (bmi < 18.5) {
+                remark.innerText = 'Underweight'
+            } 
+            else if (bmi >= 18.5 && bmi <= 24.9) {
+                remark.innerText = 'Helathy weight'
+            }
+            else {
+                remark.innerText = 'Overweight'
+            }
+        })
+    </script>
+</body>
+</html>

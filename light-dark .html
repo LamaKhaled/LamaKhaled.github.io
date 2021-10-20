@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .light {
+            background-color: white;
+            color: black;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="light">
+
+    <button id="btn-dark">
+        Dark mode
+    </button>
+    
+    <button id="btn-light">
+        Light mode
+    </button>
+
+    <h1>This is heading</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem soluta recusandae cum possimus quidem ut dignissimos totam, dolor aut reprehenderit, corrupti dolorum. Incidunt odit quia eos fuga ea, aliquid accusantium praesentium asperiores voluptas reprehenderit exercitationem repellat, aspernatur blanditiis perspiciatis. Error eaque rem quisquam, sed corporis recusandae pariatur ut modi alias! Vero saepe officiis molestias. Aspernatur dignissimos quis odio veritatis pariatur aperiam ducimus molestiae laudantium modi voluptatibus. Aperiam ea laborum facere fuga laboriosam temporibus dolor atque odio cumque delectus explicabo rem rerum nostrum, ullam, culpa necessitatibus perferendis in vero doloribus? Quis maxime nulla laudantium vitae incidunt corporis modi doloremque ea illo!</p>
+
+    <script>
+        let darkBtn = document.getElementById('btn-dark')
+        let lightBtn = document.getElementById('btn-light')
+        let body = document.body
+
+        darkBtn.addEventListener('click', function () {
+            console.log('btn dark')
+            body.classList.remove('light')
+            body.classList.add('dark')
+        })
+
+        lightBtn.addEventListener('click', function () {
+            body.classList.remove('dark')
+            body.classList.add('light')
+        })
+    </script>
+</body>
+</html>

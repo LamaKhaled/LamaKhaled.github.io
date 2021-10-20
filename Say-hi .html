@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Say hi</title>
+</head>
+<body>
+    <div>
+        <p id="result"></p>
+        <input type="text" id="name" placeholder="Enter your name">
+        <button type="button" id="btn">Say hi</button>
+    </div>
+
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            let name = document.getElementById('name').value 
+            let date = new Date()
+            let hour = date.getHours() 
+            let result = document.getElementById('result')
+
+            if (name !== '') {
+                if (hour >= 12 && hour < 24) {
+                    window.alert(`Good afternoon ${name}`);
+                }
+                else {
+                    window.alert(`Good moorning ${name}`);
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
