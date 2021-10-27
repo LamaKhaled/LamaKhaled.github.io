@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+<!-- the color is red -->
+.e { color:red;}
+</style>
+
+<script>
+function validateForm() {
+var r = true;
+var p = true;
+var x=document.getElementById("name").value;
+var regEx = /^[A-Za-z]+$/;
+if (!(x.match(regEx)))
+{document.getElementById('e1').innerHTML= "* only letter is allowed";
+document.getElementById('name').style.borderColor='red'; r= false;}
+else
+{ document.getElementById('e1').innerHTML= " "; document.getElementById('name').style.borderColor='black';
+} 
+return r;
+}
+var p = true;
+var x=document.getElementById("password").value;
+var regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/;
+if (!(x.match(regEx2)))
+{document.getElementById('e2').innerHTML= "*password must be filled out";
+document.getElementById('password').style.borderColor='red'; p= false;}
+else
+{ document.getElementById('e2').innerHTML= " "; document.getElementById('password').style.borderColor='black';
+} 
+else
+{  
+labpass.innerHTML = "*Your password shoud At least one small letter and one capital letter one digit";
+} 
+return p;
+}
+  if (password.value != Confrim.value) {
+ labConf.style.color = "red";labConf.innerHTML = "*Your passs does not match";
+   }
+            else {
+                labConf.innerHTML = "";
+            }
+  </script> 
+  </head>
+  
+  <body>
+  <h1> SIGN UP </h1>
+<form onsubmit="return validateForm()"> 
+Full name:
+<input type="text" id="name" ><span class= "e"></span>
+<br>
+<br> 
+User Name:
+<input type="text" id="username">
+ <br>
+ <br> 
+password:
+<input type="password" id="pass"><span class= "p"></span> 
+<br>
+<br>
+Confrim password:
+<input type="password" id="pass2>
+<br>
+<br>
+<input type="submit" value="SIGN UP"> 
+<br>
+<br>
+ <button>Sin Up</button>
+</form>
+
+
+</body>
+ </html>
+  
+  
+  
+  
+  
+  
+  
+  
+  
