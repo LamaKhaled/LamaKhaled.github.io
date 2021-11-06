@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JQuery HW</title>
+  
+  <!-- the <script> tag should be inside the <head> section -->
+  <!--  Google is an example of someone who host jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <style>
+      body {
+        background: white;
+        color: black;
+      }
+      .dark{
+        background: black;
+        color: white;
+      }
+      </style>
+
+
+<script>
+
+$(document).ready(function(){
+$('button').click(function(){
+$('body').toggleClass('dark');
+
+});
+});
+</script>
+ </head>
+ 
+ <body>
+  <h1>JQuery dark or light</h1> 
+  <p>Choose the Mode of the page ( dark or light)</p>
+  
+  <button type="button">Click here</button>
+  
+  
+</body>
+</html>
+
+
